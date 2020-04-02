@@ -1,0 +1,113 @@
+//button switch1
+if(PH0==0)// if the button 1 is pressed
+{
+   for(int i=0; i<100; i++);  //we are adding a debounce delay
+   if(PH0==0 && switch1==0) //the button is pressed and the led is off
+   {
+       PB0=0;
+       MSDelay(500); //we need to set frequency to control the led
+       PB0=1;  //the led is turning on
+       MSDelay(500);
+       switch1=1;
+   }
+   else{
+       PB0=0; //turn off
+       switch1=0;
+   }
+}
+
+break;
+
+//button switch2
+case 2;
+if(PH1==0)// if the button 2 is pressed
+{
+for(int i=0; i<100; i++);  //we are adding a debounce delay
+if(PH1==0 && switch2==0) //the button is pressed and the led is off
+{
+    PB1=0;  
+    MSDelay(1000); //with MSDelay1000 we set a frequency of 1hz
+    PB1=1; // turning on the led
+    MSDelay(1000); // set frequency of 1 1hz
+    switch2=1; // the state is remember
+}
+
+else
+
+{
+    PB1=0;   //turning off
+    switch2=0; //state
+    
+}
+
+}
+
+break;
+case 3;
+
+//button switch3
+if(PH2==0) //if the third button is pressed
+{
+    for(int i=0; i<100; i++);//debounce delay is adding
+    if(PH2==0 && switch3==0)//button is pressedand led is still off
+    {
+        PB2=0;
+        MSDelay(4000);//we set the required frequency (4hz)
+        PB2=1;//turning on the led
+        MSDelay(4000);//frequency is 4hz
+        switch3=1;
+        
+    }
+    else
+    {
+        PB2=0//turning off
+        switch3=0;
+    }
+}
+break;
+
+
+//button 4
+
+if(PH3==0); //if the fourth button is pressedand
+{
+    for(int i=0; i<100; i++); adding a dobounce delay
+    if(PH3==0 && switch4==0)  //button 4 is still pressed and all leds are off
+    {
+        PB0=0;
+        PB1=0;
+        PB2=0;
+        PB3=0;
+        PB4=0;
+        PB5=0;
+        PB6=0;
+        PB7=0;
+        MSDelay(500); //set a frequency of 0,5 hz
+        PB0=1;   
+        PB1=1;
+        PB2=1;
+        PB3=1;
+        PB4=1;       //turningal the leds on
+        PB5=1;
+        PB6=1;
+        PB7=1;   
+        MSDelay(500); //set a frequency of 0,5 hz
+        switch4=1; 
+    }
+    else
+    
+    {
+        PB0=0;
+        PB1=0;
+        PB2=0;
+        PB3=0;
+        PB4=0; //turning the ledsoff
+        PB5=0;
+        PB6=0;
+        PB7=0;
+        
+        switch4=0;
+    }
+}
+break;
+
